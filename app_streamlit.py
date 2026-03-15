@@ -3,7 +3,8 @@ import requests
 from streamlit_oauth import OAuth2Component
 import gspread, re
 from oauth2client.service_account import ServiceAccountCredentials
-import json
+from google.oauth2.service_account import Credentials
+
 
 
 # -------- GOOGLE OAUTH --------
@@ -39,9 +40,10 @@ def pobierz_uczniow():
         "https://www.googleapis.com/auth/drive",
     ]
 
-    creds_dict = json.loads(st.secrets["gcp_service_account"])
-
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+    creds = Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"],
+    scopes=scope
+)
 
     client = gspread.authorize(creds)
 
