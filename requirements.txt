@@ -1,0 +1,5 @@
+streamlit
+streamlit-oauth
+requests
+gspread
+oauth2client
