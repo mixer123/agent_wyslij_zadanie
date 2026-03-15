@@ -3,3 +3,4 @@ streamlit-oauth
 requests
 gspread
 oauth2client
+json
