@@ -2,3 +2,4 @@ credentials.json
 app.py
 app1.py
 .streamlit/secrets.toml
+generuj_haslo.py
