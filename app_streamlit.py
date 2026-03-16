@@ -158,16 +158,38 @@ else:
             plik = st.file_uploader("Dodaj plik", type=["pdf"])
             with st.expander("Informacja o przetwarzaniu danych (RODO)"):
                     st.write("""
-                Administratorem danych jest nauczyciel matematyki.
-                Dane (imię, nazwisko, email) są przetwarzane wyłącznie
-                w celu sprawdzenia przesłanego zadania.
+                Klauzula Informacyjna (RODO)
 
-                Dane nie są przekazywane osobom trzecim i są usuwane
-                po zakończeniu sprawdzania zadania.
+1. Administrator Danych Osobowych Administratorem danych osobowych uczniów jest ZSCKR w Studzieńcu, z siedzibą w Studzieńcu 09-200 Sierpc, 
+                             reprezentowana przez Dyrektora Szkoły.
+
+2. Cel i podstawa prawna przetwarzania Dane osobowe (imię, nazwisko, adres e-mail) przetwarzane są w celu:
+
+Weryfikacji tożsamości ucznia oraz sprawdzenia poprawności wykonanego zadania domowego z matematyki przy wsparciu narzędzi AI.
+
+Podstawą prawną przetwarzania jest art. 6 ust. 1 lit. e RODO – przetwarzanie jest niezbędne do wykonania zadania 
+                             realizowanego w interesie publicznym
+                              (realizacja procesów dydaktycznych i oceniania zgodnie z ustawą o systemie oświaty).
+
+3. Odbiorcy danych Dane są przechowywane w bezpiecznym arkuszu Google, do którego dostęp ma wyłącznie nauczyciel przedmiotu. 
+                             Treść zadań może być analizowana przez model AI w sposób zanonimizowany 
+                             (bez przekazywania danych identyfikacyjnych do zewnętrznych serwerów AI).
+
+4. Okres przechowywania danych Dane będą przechowywane jedynie przez okres niezbędny do sprawdzenia zadania i wystawienia oceny, nie dłużej niż do końca bieżącego roku szkolnego, po czym zostaną trwale usunięte.
+
+5. Prawa osoby, której dane dotyczą Uczeń (lub jego opiekun prawny) ma prawo do:
+
+Dostępu do treści swoich danych oraz ich sprostowania.
+Wniesienia sprzeciwu wobec przetwarzania.
+Żądania usunięcia danych (prawo do bycia zapomnianym).
+Wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).
+
+6. Dobrowolność podania danych Podanie danych jest dobrowolne, 
+                             ale niezbędne do skorzystania z elektronicznego formularza przesyłania zadań i otrzymania automatycznej 
+                             informacji zwrotnej.
                 """)
             zgoda = st.checkbox(
-                "Wyrażam zgodę na przetwarzanie moich danych osobowych "
-                "w celu sprawdzenia zadania zgodnie z RODO." )
+                "Zapoznałem/am się z powyższą Informacją o przetwarzaniu danych (RODO) i przesyłam zadanie do sprawdzenia." )
 
             submit = st.form_submit_button("Wyślij")
 
